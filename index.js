@@ -83,3 +83,10 @@ module.exports = function (handlebars) {
 
     return handlebars;
 };
+
+// AMD / RequireJS support
+if ( typeof define === 'function' && define.amd ) {
+    define( 'handlebars-layouts', [], function() {
+        return module.exports;
+    });
+}
